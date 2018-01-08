@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/content_containner"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="51dip"
+        android:persistentDrawingCache="animation" />
+
+    <RelativeLayout
+        android:id="@+id/rl_buttom"
+        android:layout_width="fill_parent"
+        android:layout_height="62dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent" >
+
+        <RadioGroup
+            android:id="@+id/tab_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="51dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_bar_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="8dip"
+            android:weightSum="4" >
+
+            <RadioButton
+                android:id="@+id/tab_recommond"
+                style="@style/bottom_tab_style"
+                android:drawableTop="@drawable/tab_home_btn"
+                android:text="@string/shopping_mall" />
+
+            <RadioButton
+                android:id="@+id/classify_search"
+                style="@style/bottom_tab_style"
+                android:drawableTop="@drawable/tab_classify_btn"
+                android:text="@string/classify_search" />
+
+            <RadioButton
+                android:id="@+id/story"
+                style="@style/bottom_tab_style"
+                android:drawableTop="@drawable/tab_story_btn"
+                android:text="@string/story" />
+
+            <RadioButton
+                android:id="@+id/more"
+                style="@style/bottom_tab_style"
+                android:drawableTop="@drawable/tab_me_btn"
+                android:text="@string/me_tab" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/tab_rl_activity"
+            android:layout_width="fill_parent"
+            android:layout_height="62dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:paddingBottom="0dip"
+            android:visibility="gone" 
+            android:gravity="center_vertical">
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/low_price_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/tab_radio"
+            android:layout_marginRight="25dip"
+            android:layout_marginTop="6dip"
+            android:src="@drawable/set_red_dot"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

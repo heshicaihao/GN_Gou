@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dialog_content_padding_bottom"
+    android:paddingLeft="@dimen/dialog_content_margin_left_right"
+    android:paddingRight="@dimen/dialog_content_margin_left_right" >
+
+    <ScrollView
+        android:id="@+id/start_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dialog_chebox_margin_top"
+        android:scrollbars="none" >
+
+        <TextView
+            android:id="@+id/gn_dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_content_margin_top"
+            android:lineSpacingMultiplier="1.265"
+            android:text="@string/g_message"
+            android:textColor="@color/dialog_message_color"
+            android:textSize="@dimen/dialog_message_size" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/check_box_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_tip"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/tip_check_box"
+            android:layout_width="@dimen/checkbox_width"
+            android:layout_height="@dimen/checkbox_height"
+            android:contentDescription="@string/empty"
+            android:src="@drawable/check_box" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/checkbox_margin_left"
+            android:text="@string/liuliang_checkbox"
+            android:textColor="@color/send_qb_gray"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

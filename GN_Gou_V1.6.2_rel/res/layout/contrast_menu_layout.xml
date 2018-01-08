@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="155dp"
+    android:background="@color/ninety_five_percent_white" >
+
+    <TextView
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/goods_contrast_share"
+        android:gravity="center"
+        android:text="@string/share"
+        android:textColor="#999999"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@null"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/goods_contrast_favorite"
+        android:gravity="center"
+        android:text="@string/favorites"
+        android:textColor="#999999"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@null"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/goods_contrast_delete"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textColor="#999999"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="@null"
+        android:padding="2dp"
+        android:src="@drawable/goods_contrast_cancel" />
+
+</RelativeLayout>

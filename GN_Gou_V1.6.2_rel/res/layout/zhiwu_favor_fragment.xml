@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pla="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.gionee.client.view.widget.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_menu_bar"
+        android:layout_marginTop="5dip"
+        android:background="#f2f2f2"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        android:scrollbars="@null"
+        pla:plaColumnNumber="2"
+        pla:plaLandscapeColumnNumber="2"
+        ptr:ptrOverScroll="false" >
+
+        <com.huewu.pla.MultiColumnListView
+            android:id="@+id/zhiwu_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f5f5f5"
+            pla:plaColumnNumber="2"
+            pla:plaLandscapeColumnNumber="2" >
+        </com.huewu.pla.MultiColumnListView>
+    </com.gionee.client.view.widget.PullToRefreshScrollView>
+
+    <RelativeLayout
+        android:id="@+id/history_no_zhiwu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/history_action_btn"
+            android:layout_width="288dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/umeng_fb_contact_info_btn"
+            android:text="@string/goto_look"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/above_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/history_action_btn"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp" >
+
+            <ImageView
+                android:id="@+id/amigo_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:src="@drawable/amigo_icon" />
+
+            <TextView
+                android:id="@+id/history_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/amigo_icon"
+                android:layout_centerHorizontal="true"
+                android:text="@string/no_order_history"
+                android:textColor="#cecece"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:onClick="onClick"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="170dip"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/iv_balloon"
+                android:layout_width="82dip"
+                android:layout_height="79dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/shangcheng" />
+
+            <ImageView
+                android:id="@+id/iv_lunzi"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="58dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/lunzi" />
+
+            <ImageView
+                android:id="@+id/iv_touying"
+                android:layout_width="38dip"
+                android:layout_height="6dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/touying" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="114dip"
+                android:text="@string/tv_loading"
+                android:textColor="@color/tv_loading"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        style="@style/newProgressStyle"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/go_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginRight="12dp"
+        android:contentDescription="@null"
+        android:src="@drawable/go_top_img"
+        android:visibility="gone" />
+
+</RelativeLayout>

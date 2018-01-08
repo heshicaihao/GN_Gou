@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/title_compare_price" />
+
+    <RelativeLayout
+        android:id="@+id/goods_details_container"
+        android:layout_width="match_parent"
+        android:background="@color/red_high_light"
+        android:layout_height="80dp" >
+        
+        
+    </RelativeLayout>
+    <RadioGroup
+            android:id="@+id/compare_price_radio"
+            android:layout_width="fill_parent"
+            android:layout_height="51dip"
+            android:background="@drawable/bottom_bar_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+            
+            <RadioButton
+                android:id="@+id/compare_price_rb"
+                style="@style/compare_price_style"
+                android:text="@string/same_style_recommend" />
+            
+            <RadioButton
+                android:id="@+id/history_price_rb"
+                style="@style/compare_price_style"
+                android:text="@string/history_price" />
+        </RadioGroup>
+        
+        <com.gionee.client.view.widget.TabViewPager
+        android:id="@+id/compare_price_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+    
+        
+    
+
+</LinearLayout>

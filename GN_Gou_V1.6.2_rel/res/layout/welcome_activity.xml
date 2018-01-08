@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.gionee.client.view.widget.TabViewPager
+        android:id="@+id/welcome_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+    <com.gionee.client.view.widget.WelcomePageIndicatorView
+        android:id="@+id/welcome_page_index"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/jump_over"
+        android:layout_width="77dp"
+        android:layout_height="37dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+          android:paddingRight="5dp"
+        android:background="@drawable/jump_over_bg"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/jump_over"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

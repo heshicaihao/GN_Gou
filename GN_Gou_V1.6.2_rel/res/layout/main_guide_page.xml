@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="66dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="13dp"
+    android:paddingTop="17dp" >
+
+    <com.gionee.client.view.widget.MyWebView
+        android:id="@+id/mywebview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/empty"
+        android:onClick="onClick"
+        android:src="@drawable/close_btn" />
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        style="@style/newProgressStyle"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

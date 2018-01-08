@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_menu_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="64dip"
+        android:background="#fbfbfb" >
+
+        <TextView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/return_bg"
+            android:clickable="true"
+            android:enabled="false"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="3dip"
+            android:singleLine="true"
+            android:text="@string/app_search"
+            android:textColor="@drawable/search_text_color"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="34dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/search_btn"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="@drawable/question_search_edit_bg"
+            android:clickable="true"
+            android:drawableLeft="@drawable/question_search_icon"
+            android:drawablePadding="10dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/pls_input_keyword"
+            android:imeOptions="actionSearch"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="@color/search_hint_text_color"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/gray" />
+
+    <ListView
+        android:id="@+id/list_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@drawable/gray"
+        android:dividerHeight="1px"
+        android:footerDividersEnabled="true" >
+    </ListView>
+
+    <ListView
+        android:id="@+id/list_search_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@drawable/gray"
+        android:dividerHeight="1px"
+        android:footerDividersEnabled="true" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/no_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/no_question_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_related_question"
+            android:textColor="#aaaaaa"
+            android:textSize="15sp" >
+        </TextView>
+
+        <Button
+            android:id="@+id/goto_ask_question"
+            android:layout_width="127dip"
+            android:layout_height="40dip"
+            android:layout_below="@id/no_question_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/attention_add_src"
+            android:onClick="onClick"
+            android:text="@string/go_to_ask_question"
+            android:textColor="@drawable/add_text_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

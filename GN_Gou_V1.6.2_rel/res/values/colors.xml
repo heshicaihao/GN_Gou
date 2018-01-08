@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* //device/apps/common/assets/res/any/http_authentication_colors.xml
+**
+** Copyright 2006, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+<!--
+     FIXME: Change the name of this file!  It is now being used generically
+    for the browser
+-->
+<resources>
+
+    <color name="common_list_divider">#dfdfdf</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000001</color>
+    <color name="tab_text_color_nor">#666666</color>
+    <color name="tab_text_color_unable">#c6c6c6</color>
+    <color name="tab_text_color_sel">#ff6633</color>
+    <color name="gray_tab_bg">#f6f6f6</color>
+    <color name="gray_transparent">#aa000000</color>
+    <color name="about_text">#FF3D3D3D</color>
+    <color name="edit_hint_text">#afafaf</color>
+    <color name="list_select">#e5e5e5</color>
+    <color name="search_item_bg">#f8f8f8</color>
+    <color name="web_color">#fafafa</color>
+    <color name="dialog_text_nor">#868686</color>
+    <color name="dialog_text_sel">#E05B3F</color>
+    <color name="green">#33b5e5</color>
+    <color name="refresh_bg_blue">#f2f2f2</color>
+    <color name="search_edit_hit">#b9b9b9</color>
+    <color name="yello_bg_color">#feeeb8</color>
+    <color name="start_page_bg">#f8f8f8</color>
+    <color name="contact_gray_bg">#fafafa</color>
+    <color name="questio_answer">#b1b1b1</color>
+    <color name="send_qb_gray">#888888</color>
+    <color name="send_qb_red">#ff7f09</color>
+    <color name="add_attention_text">#aaaaaa</color>
+    <color name="edit_bg_color">#ebeced</color>
+    <color name="edit_hint_text_color">#c2c3c4</color>
+    <color name="group_bg">#fbfcfc</color>
+    <color name="add_text_color">#ff9000</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="menu_bg">#21282F</color>
+    <color name="menu_text">#666666</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="scanner_line">#E5593B</color>
+    <color name="scanner_text">#C4C4C1</color>
+    <color name="feedback_server">#222222</color>
+    <color name="feedback_client">#676767</color>
+    <color name="app_open_text_color">#222222</color>
+    <color name="app_download_text_color">#8f8f8f</color>
+    <color name="menu_group_text">#5d6063</color>
+    <color name="category_tab_text_default">#696969</color>
+    <color name="category_tab_text_select">#f26d53</color>
+    <color name="category_grid_text">#a9a9a9</color>
+    <color name="search_hint_text_color">#a6a6a6</color>
+    <color name="search_text_nor">#bababa</color>
+    <color name="search_text_sel">#838383</color>
+    <color name="transparent_background">#30000000</color>
+    <color name="search_btn_sel">#ff6633</color>
+    <color name="comments_text_color">#444444</color>
+    <color name="comments_text_nor">#aaaaaa</color>
+    <color name="discuss_name_text">#1b418e</color>
+    <color name="attention_text_color">#939393</color>
+    <color name="contrast_text_disable">#c0c1c6</color>
+    <color name="ninety_five_percent_white">#f2ffffff</color>
+    <color name="panet">#1a1a1a</color>
+    <color name="gray_text_color">#e7e7e7</color>
+    <color name="discuss_praise">#6275a8</color>
+    <color name="edit_btn_unenable">#aaaaaa</color>
+    <color name="verify_failed">#999999</color>
+    <color name="huodong_messges_bg">#FBFBFB</color>
+    <color name="qishu_color">#666666</color>
+    <color name="message_title_color">#444444</color>
+    <color name="message_nomal_color">#888888</color>
+    <color name="message_current_best_jilu_color">#ff9900</color>
+    <color name="message_all_best_jilu_color">#BDC3C7</color>
+    <color name="game_title_bg">#FCFCFC</color>
+    <color name="game_time_color">#2dc89f</color>
+    <color name="game_tip_color">#832f1f</color>
+    <color name="tv_loading">#aaaaaa</color>
+    <color name="tv_question_big_title">#aaaaaa</color>
+    <color name="net_tip_text">#666</color>
+    <color name="order_history_time">#888888</color>
+    <color name="order_history_content">#4444</color>
+    <color name="red_high_light">#ff6633</color>
+    <color name="delete_normal_color">#feddd7</color>
+    <color name="zhiwu_click_text">#ccffffff</color>
+    <color name="zhiwu_clicked_text">#a0a0a0</color>
+    <color name="zhiwu_tittle_text">#666666</color>
+
+    <drawable name="white">#ffffff</drawable>
+    <drawable name="app_detail_bk">#f4f4f4</drawable>
+    <drawable name="menu_color_divider">#293038</drawable>
+    <drawable name="menu_item_bg_nor">#21282F</drawable>
+    <drawable name="menu_item_bg_sel">#1A2025</drawable>
+    <drawable name="menu_group_bg_nor">#1d2329</drawable>
+    <drawable name="orrange_yello">#81cfeb</drawable>
+    <drawable name="dialog_gray">#f5f5f5</drawable>
+    <drawable name="gray">#e3e3e3</drawable>
+    <drawable name="start_page_red_bg">#ff6836</drawable>
+    <drawable name="transparent">#00000001</drawable>
+    <drawable name="category_pressed">#E9E9E9</drawable>
+    <drawable name="share_btn_bg_color">#ff9000</drawable>
+    <drawable name="app_introduction_bk">#eeeeee</drawable>
+    <drawable name="speed_service_bk">#fafafa</drawable>
+    <drawable name="title_bar_bk">#fbfbfb</drawable>
+    <drawable name="comment_list_divider">#f5f5f5</drawable>
+    <drawable name="comment_img_default">#efefef</drawable>
+    <drawable name="category_bg_nor">#e9e9e9</drawable>
+    <drawable name="my_favorite_divider">#dfdfdf</drawable>
+    <drawable name="my_favorite_top_divider">#dcdcdc</drawable>
+    <drawable name="browse_history_bg">#fcfcfc</drawable>
+    <drawable name="more_dividing_line">#e6e7e7</drawable>
+    <drawable name="history_category">#f7f8f8</drawable>
+    <drawable name="question_import_divider_color">#dadada</drawable>
+    <drawable name="messges_list_divider">#f5f5f5</drawable>
+    <drawable name="message_nomal_bg">#E5E5E5</drawable>
+    <drawable name="huodong_bg">#fafafa</drawable>
+    <drawable name="add_attention_tab_bg">#fcfcfc</drawable>
+    <drawable name="loading_bg">#F5F5F5</drawable>
+    <drawable name="category_item_img_bg">#efefef</drawable>
+    <drawable name="category_item_bg_nor">#F5F5F5</drawable>
+    <drawable name="category_item_bg_pressed">#FFFFFF</drawable>
+    <drawable name="no_more_line_color">#AAAAAA</drawable>
+    <drawable name="mul_sel_bar_top_divider">#dadada</drawable>
+
+</resources>

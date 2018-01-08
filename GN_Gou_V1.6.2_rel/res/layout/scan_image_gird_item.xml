@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/framelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" >
+
+    <com.gionee.client.view.widget.MyImageView
+        android:id="@+id/child_image"
+        android:layout_width="fill_parent"
+        android:layout_height="110dip"
+        android:background="@drawable/friends_sends_pictures_no"
+        android:scaleType="centerCrop" />
+
+    <CheckBox
+        android:id="@+id/child_checkbox"
+        android:layout_width="25dip"
+        android:layout_height="25dip"
+        android:layout_gravity="right"
+        android:layout_marginRight="6dip"
+        android:layout_marginTop="6dip"
+        android:button="@drawable/pictures_select_icon" />
+
+</FrameLayout>

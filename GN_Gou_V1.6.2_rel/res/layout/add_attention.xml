@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/add_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/title_bar_bk" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="1dp"
+            android:background="@drawable/return_bg"
+            android:contentDescription="@drawable/menu_btn"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:padding="6dp"
+            android:src="@drawable/back" />
+
+        <EditText
+            android:id="@+id/add_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="@drawable/add_attention_edit"
+            android:clickable="true"
+            android:drawableLeft="@drawable/edit_left"
+            android:drawableRight="@drawable/edit_left"
+            android:hint="@string/input_favorite_shopping_channel"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLength="16"
+            android:textColor="@color/about_text"
+            android:textColorHint="@color/edit_hint_text_color"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/add_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/add_edit_text"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/search_default_btn"
+            android:contentDescription="@string/app_name"
+            android:onClick="onClick" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/add_title"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.gionee.client.view.widget.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:background="@drawable/add_attention_tab_bg"
+            android:paddingLeft="10dip"
+            android:paddingRight="30dip"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/slide_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/indicator"
+            android:layout_marginTop="15dip"
+            android:onClick="onClick"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dip"
+            android:src="@drawable/triangle_right_btn" >
+        </ImageView>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/indicator" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:layout_below="@id/indicator"
+            android:background="@drawable/top_bar_shadow" />
+    </RelativeLayout>
+
+    <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+        android:id="@+id/channels_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/add_title"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:childDivider="#f1f1f1"
+        android:childIndicator="@null"
+        android:divider="#f1f1f1"
+        android:dividerHeight="0.5dp"
+        android:groupIndicator="@null"
+        android:listSelector="#00000000"
+        android:visibility="gone" >
+    </se.emilsjolander.stickylistheaders.StickyListHeadersListView>
+
+    <ProgressBar
+        android:id="@+id/add_loading_bar"
+        style="@style/newProgressStyle"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

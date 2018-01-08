@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>网络无法连接</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<style type="text/css">
+	*{margin:0; padding:0;}
+	html{font-size:20px; display:-webkit-box; -webkit-box-align:center; -webkit-box-pack:center;}
+	@media all and (min-width:359px) and (-webkit-min-device-pixel-ratio:1.5){html{font-size:22.5px;}}
+	body{background:#f8f8f8; font:1rem/1 \5FAE\8F6F\96C5\9ED1,\5b8b\4f53,Tahoma,Helvetica,Arial,sans-serif;}
+	.unnetwork{display:block;}
+	.unnetwork p{text-align:center; overflow:hidden;}
+	.unnetwork p img{width:4.3rem; height:auto; margin-top:4.44rem;}
+	.unnetwork .text{margin-top:0.18rem; font-size:0.7rem; color:#cecece; line-height:1.4;}
+	.unnetwork .button{background-image: url("amigoorange_btn_sel.9.png");width:4.3rem; height:auto; margin-top:4.44rem;}
+.unnetwork .web-btn{text-align:center;}
+.unnetwork .web-btn a,.web-btn button{display:inline-block;font-size:.8rem;border:none;background:#ff9000;color:#fff;-webkit-border-radius:5px;border-radius:5px;height:2rem; line-height:2rem; margin-top:1rem;width:12.8rem}
+
+</style>
+</head>
+   <script language="javascript">
+                 function wave(no) {
+                	 var nums=parseInt(no)
+                	var div1=document.getElementById("div1");
+                	for(var i=0;i<nums;i++){
+                		var newButton=document.createElement("input");
+                		newButton.setAttribute("type","button");
+                		newButton.setAttribute("name",i);
+                		var buttonValue="第"+(i+1)+"个按钮"
+                		newButton.setAttribute("value",buttonValue);
+                		var newString="demo.show("+i+");";
+                		newButton.setAttribute("onclick",newString);
+                		var br=document.createElement("br");
+                		
+                		div1.appendChild(newButton);
+                		div1.appendChild(br);
+                	}
+                  // document.getElementById("droid").value=no;
+                    //alert("hello world");
+                }
+        </script>
+ <body>
+	<section class="unnetwork">
+		<p><img src="unnetwork.png" /></span></p>
+		<p class="text">加载失败，请检查网络设置或刷新</p>
+		<div class="web-btn">
+			<button  onClick="window.share.reload()">刷新</button>
+		</div>
+
+		</input>
+	</section>
+</body>
+</html>

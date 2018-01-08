@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ededed"
+    android:orientation="vertical"
+    tools:context=".ConversationActivity" >
+
+    <com.gionee.client.view.shoppingmall.GNTitleBar
+        xmlns:ptr="http://schemas.android.com/apk/res/com.gionee.client"
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ptr:rightBtnVisible="false"
+        ptr:title="@string/umeng_fb_contact_title" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_below="@id/title_bar"
+        android:background="@drawable/top_bar_shadow" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/contact_gray_bg" >
+
+        <EditText
+            android:id="@+id/umeng_fb_contact_info"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/feedback_edit_height"
+            android:layout_marginBottom="@dimen/feedback_edit_left_right_bottom_margin"
+            android:layout_marginLeft="@dimen/feedback_edit_left_right_bottom_margin"
+            android:layout_marginRight="@dimen/feedback_edit_left_right_bottom_margin"
+            android:layout_marginTop="@dimen/feedback_edit_top_margin"
+            android:background="@drawable/contact_info_edit"
+            android:gravity="left|top"
+            android:hint="@string/umeng_fb_contact_info_hint"
+            android:maxLength="100"
+            android:padding="10dp"
+            android:textColor="#575447"
+            android:textColorHint="#B1B1B1"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/umeng_fb_save"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignLeft="@id/umeng_fb_contact_info"
+            android:layout_alignRight="@id/umeng_fb_contact_info"
+            android:layout_below="@id/umeng_fb_contact_info"
+            android:background="@drawable/umeng_fb_contact_info_btn"
+            android:contentDescription="@string/app_name"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_below="@id/title_bar"
+        android:background="@drawable/top_bar_shadow" />
+
+</RelativeLayout>

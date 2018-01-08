@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 下载 -->
+    <item
+        android:drawable="@drawable/install_btn"
+        android:maxLevel="0"/>
+    <!-- 下载中 -->
+    <item
+        android:drawable="@drawable/status_download"
+        android:maxLevel="1"/>
+    <!-- 打开 -->
+    <item
+        android:drawable="@drawable/status_open"
+        android:maxLevel="2"/>
+    <!-- 升级 -->
+    <item
+        android:drawable="@drawable/install_btn"
+        android:maxLevel="3"/>
+    <!-- 安装 -->
+    <item
+        android:drawable="@drawable/install_btn"
+        android:maxLevel="4"/>
+    <!-- 等待中 -->
+    <item
+        android:drawable="@drawable/status_download"
+        android:maxLevel="5"/>
+
+</level-list>

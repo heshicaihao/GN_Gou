@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededed"
+    android:orientation="vertical" >
+
+    <com.gionee.client.view.shoppingmall.GNTitleBar
+        xmlns:ptr="http://schemas.android.com/apk/res/com.gionee.client"
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ptr:rightBtnVisible="false"
+        ptr:title="@string/common_question" />
+
+    <ListView
+        android:id="@+id/umeng_fb_qestion_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_bar"
+        android:background="@color/white"
+        android:cacheColorHint="@android:color/transparent"
+        android:choiceMode="none"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:transcriptMode="alwaysScroll" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_below="@id/title_bar"
+        android:background="@drawable/top_bar_shadow" />
+
+</RelativeLayout>

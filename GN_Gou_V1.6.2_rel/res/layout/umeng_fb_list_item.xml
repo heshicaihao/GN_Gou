@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" 
+    android:paddingBottom="10dip">
+
+    <com.gionee.client.view.widget.CircleImageView
+        android:id="@+id/service_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dip"
+        android:src="@drawable/head_default"
+        android:visibility="visible" />
+
+    <com.gionee.client.view.widget.CircleImageView
+        android:id="@+id/user_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dip"
+        android:src="@drawable/head_default"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/umeng_fb_reply_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/user_head"
+        android:layout_toRightOf="@id/service_head"
+        android:background="@drawable/conversation_bg"
+        android:gravity="center_vertical"
+        android:maxWidth="240dip"
+        android:text="@string/feedback_notify"
+        android:textColor="#000000"
+        android:textSize="15sp" 
+        />
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        style="@style/newProgressStyle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@id/umeng_fb_reply_content"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/send_error"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@id/umeng_fb_reply_content"
+        android:src="@drawable/send_error"
+        android:visibility="gone" />
+
+</RelativeLayout>

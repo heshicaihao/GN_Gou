@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.gionee.client.view.shoppingmall.GNSearchBar
+        android:id="@+id/category_top_menu_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+    </com.gionee.client.view.shoppingmall.GNSearchBar>
+
+    <ListView
+        android:id="@+id/categrory_tabs_list"
+        android:layout_width="91dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/category_top_menu_bar"
+        android:background="@drawable/category_tabs_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="always"
+        android:scrollbars="none" >
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/sub_category_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/category_top_menu_bar"
+        android:layout_toRightOf="@id/categrory_tabs_list"
+        android:orientation="vertical"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="6dip" >
+
+        <ImageView
+            android:id="@+id/category_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="67.5dp"
+            android:layout_marginBottom="6dip"
+            android:background="@drawable/category_banner_bg"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <!--
+                 <com.gionee.client.view.widget.GridViewForScrollView
+                android:id="@+id/category_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:horizontalSpacing="5dp"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3"
+                android:verticalSpacing="5dp" >
+            </com.gionee.client.view.widget.GridViewForScrollView>
+        -->
+
+        <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/category_grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/category_bg"
+            android:clipToPadding="false"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:verticalSpacing="0dp"
+            tools:context="com.gionee.client.activity.tabFragment.CategoryFragment" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="4dip"
+        android:layout_below="@id/category_top_menu_bar"
+        android:background="@drawable/top_bar_shadow" />
+</RelativeLayout>

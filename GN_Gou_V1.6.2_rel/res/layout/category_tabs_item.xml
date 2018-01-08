@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="22dp"
+    android:paddingTop="22dp" >
+
+    <RelativeLayout
+        android:id="@+id/category_tabs_select_flag"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/category_tabs_item_icon"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/category_tabs_item_icon"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/category_tabs_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/category_tabs_select_flag"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/category_tabs_select_flag"
+        android:gravity="center_vertical"
+        android:shadowColor="#ffffff"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:singleLine="true"
+        android:textColor="@drawable/category_tabs_text_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/categrory_tabs_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/category_tabs_select_flag"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/category_tab_select_indicator" />
+
+</RelativeLayout>

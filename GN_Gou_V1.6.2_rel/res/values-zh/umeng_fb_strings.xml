@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="umeng_fb_contact_info_hint">请留下您的手机/QQ/邮箱</string>
+    <string name="umeng_fb_contact_update_at">更新于 </string>
+    <string name="umeng_fb_back">返回</string>
+    <string name="umeng_fb_title">意见反馈</string>
+    <string name="umeng_fb_contact_title">您的联系方式</string>
+    <string name="umeng_fb_contact_info">联系方式</string>
+    <string name="umeng_fb_reply_content_hint">我想说</string>
+    <string name="umeng_fb_send">发送</string>
+    <string name="umeng_fb_reply_content_default">欢迎亲来到留言中心， 如有问题， 请给我留言。 因为回复需要时间， 
+        所以请您在留言后先退出留言中心， 10分钟后回来就能收到回复了。
+        如果是下午18: 00之后非工作时间留言， 那么将在第二天上午才能收到回复。 
+        如遇急事可以微信shopping8019或者拨打电话 ： 0755-82583525</string>
+    <string name="umeng_fb_reply_date_default">2013年3月12日 13:24:00</string>
+    <string name="umeng_fb_notification_ticker_text">有新的回复</string>
+    <string name="umeng_fb_notification_content_formatter_single_msg">新回复: %s</string>
+    <string name="umeng_fb_notification_content_formatter_multiple_msg">收到来自开发者的 %d 条回复。</string>
+
+    <string-array name="umeng_fb_qestions_qestion">
+        <item>登录购物大厅时有时显示网络无法连接，这是怎么回事？</item>
+        <item>订单已经提交成功，如何付款？</item>
+        <item>订单已经提交成功，什么时候可以发货？</item>
+        <item>为什么客服电话很难打通？</item>
+        <item>购物大厅客服工作时间？</item>
+    </string-array>
+    <string-array name="umeng_fb_qestions_answer">
+        <item>回复：请检查一下网络是否正常,然后刷新页面，如果以上两种方式都无效，请退出几分钟，稍后再进入购物大厅，可能服务器在更新。</item>
+        <item>回复：1、在线支付（支付宝、网银之类的支付工具）：请进入所购买的网站（比如淘宝凡客京东等），登录后请在“我的订单”处查看，点击“付款”，按照流程提示操作完成支付！\n2、货到付款：请您在订单送达时签收付款。</item>
+        <item>回复：订单提交成功后，一般会在72小时之内发货，如需要加急订单，请联系客服。</item>
+        <item>回复：非常抱歉，随着购物大厅发展，客户办理业务增多，有时候导致坐席电话繁忙，我们会尽快解决此问题，同时建议避开高峰期拨打客服电话。\n可通过反馈中心留言、\n微信：shopping8019、\nQQ群：237057997等方式进行咨询。</item>
+        <item>回复：客服电话：0755-82583525；工作时间：周一至周五，上午9:00-12:00，下午13:30-18:00。</item>
+    </string-array>
+
+</resources>

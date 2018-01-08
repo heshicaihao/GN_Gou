@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/advertise_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="132dip"
+        android:layout_marginTop="42dip"
+        android:background="#ffffff"
+        android:visibility="gone" >
+
+        <com.wayde.ads.view.CustomGallery
+            android:id="@+id/advertise_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff" />
+
+        <com.wayde.ads.view.PageIndicatorView
+            android:id="@+id/advertise_gallery_index"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+    </RelativeLayout>
+
+</LinearLayout>

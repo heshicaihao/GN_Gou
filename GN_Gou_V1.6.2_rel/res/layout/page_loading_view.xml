@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="48dip" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="170dip"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/iv_balloon"
+                android:layout_width="82dip"
+                android:layout_height="79dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/shangcheng" />
+
+            <ImageView
+                android:id="@+id/iv_lunzi"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="58dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/lunzi" />
+
+            <ImageView
+                android:id="@+id/iv_touying"
+                android:layout_width="38dip"
+                android:layout_height="6dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/touying" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="114dip"
+                android:text="@string/tv_loading"
+                android:textColor="@color/tv_loading"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+[
+ {"filter":"com.gionee.client.business.filter.HomeUrlHandler"},
+ {"filter":"com.gionee.client.business.filter.TaobaoClientHandler"},
+ {"filter":"com.gionee.client.business.filter.PhoneHandler"},
+ {"filter":"com.gionee.client.business.filter.MsgHandler"},
+ {"filter":"com.gionee.client.business.filter.WtaiHandler"},
+ {"filter":"com.gionee.client.business.filter.EmailHandler"},
+ {"filter":"com.gionee.client.business.filter.BlackListHanlder"},
+ {"filter":"com.gionee.client.business.filter.HttpUrlHandler"}
+ {"filter":"com.gionee.client.business.filter.WeiXinClientHandler"}
+]

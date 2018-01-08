@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="welcome_title_margintop">50dp</dimen>
+    <dimen name="welcome_mid_container_marginbottom">40dp</dimen>
+    <dimen name="welcome_title_width">254dp</dimen>
+    <dimen name="welcome_title_height">65dp</dimen>
+    <dimen name="welcome_mid_width">212dp</dimen>
+    <dimen name="welcome_mid_height">293dp</dimen>
+    <dimen name="welcome_bot_width">302dp</dimen>
+    <dimen name="welcome_bot_height">169dp</dimen>
+    <dimen name="baby_width">48dp</dimen>
+    <dimen name="baby_height">57dp</dimen>
+    <dimen name="plane_width">65dp</dimen>
+    <dimen name="plane_height">55dp</dimen>
+    <dimen name="welcome_mid_one_width">360dp</dimen>
+    <dimen name="welcome_mid_one_height">418dp</dimen>
+    
+</resources>

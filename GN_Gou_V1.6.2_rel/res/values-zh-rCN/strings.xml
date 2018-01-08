@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">购物大厅</string>
+    <string name="ok">"确定"</string>
+    <string name="cancel">"取消"</string>
+    <string name="g_message">欢迎使用购物大厅客户端软件，客户端使用完全免费，在使用过程中会产生流量费，流量费请咨询当地运营商，是否允许应用建立连接？</string>
+    <string name="g_title">系统提示</string>
+    <string name="g_checkbox">此版本不再提示</string>
+    <string name="g_cancel">退出</string>
+    <string name="empty_string">""</string>
+    <string name="empty"></string>
+    <string name="enter_name">请输入搜索内容</string>
+    <string name="no_input">请输入搜索内容</string>
+    <string name="app_search">搜索</string>
+    <string name="recommond">推荐</string>
+    <string name="pay_on_delivery">货到付款</string>
+    <string name="friendly_notify">温馨提示</string>
+    <string name="is_exit">再按一次退出应用</string>
+    <string name="menu_refresh">刷新</string>
+    <string name="menu_check_version">版本升级</string>
+    <string name="menu_help">帮助</string>
+    <string name="menu_quit">退出</string>
+    <string name="upgrade_download_now">立即下载</string>
+    <string name="upgrade_donot_download">暂不下载</string>
+    <string name="upgrade_upgrade_now">马上更新</string>
+    <string name="upgrade_donot_upgrade">暂不更新</string>
+    <string name="upgrade_start_download">购物大厅正在下载</string>
+    <string name="upgrade_title">购物大厅升级</string>
+    <string name="upgrade_download_complete_title">下载完成</string>
+    <string name="upgrade_download_complete_message">需要完成更新后才能体验新版本。</string>
+    <string name="upgrade_no_display_this_version">本版本不再提示。</string>
+    <string name="upgrade_now_version">当前版本：</string>
+    <string name="upgrade_new_version">最新版本：</string>
+    <string name="upgrade_new_feature_desc">改进信息：</string>
+    <string name="upgrade_new_down_desc1">温馨提示：</string>
+    <string name="upgrade_new_down_desc2">会保存上一版本的使用记录。</string>
+    <string name="upgrade_new_down_desc3">升级使用流量较多，建议使用WLAN。</string>
+    <string name="upgrade_file_size">大小</string>
+    <!-- <string name="upgrade_check_message">正在检查，请稍等&#8230;</string> -->
+    <string name="upgrade_error_no_enough_space">存储空间不足,请删除部分文件后再试</string>
+    <string name="upgrade_error_no_sdcard">SD卡不存在或异常，请确认SD卡存在并读写正常！</string>
+    <string name="upgrade_error_network_exception">网络异常，请检查您的网络连接。</string>
+    <string name="upgrade_tip">提示</string>
+    <string name="upgrade_no_net">网络异常，请检查您的网络连接。</string>
+    <string name="upgrade_force">该版本只有升级之后才可以使用，如果不升级可能导致客户端不能使用!</string>
+    <string name="upgrade_menu_preferences">"请设置网络"</string>
+    <string name="upgrade_no_need_update">已经是最新版本！</string>
+    <string name="upgrade_error_not_fond_file">未发现可用安装包</string>
+    <string name="upgrade_appupgrade_busy">升级正在进行中,请稍后!</string>
+    <string name="upgrade_force_mode">强制升级</string>
+    <string name="classify_search">分类</string>
+
+</resources>

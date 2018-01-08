@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="155dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants" >
+
+    <RelativeLayout
+        android:id="@+id/advertise_gallery_layout"
+        android:layout_width="153dp"
+        android:layout_height="153dp"
+        android:layout_alignParentLeft="true" >
+
+        <com.gionee.client.view.widget.CustomGallery
+            android:id="@+id/advertise_gallery"
+            android:layout_width="153dp"
+            android:layout_height="153dp"
+            android:alwaysDrawnWithCache="false"
+            android:clickable="false"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:persistentDrawingCache="none" />
+
+        <com.gionee.client.view.widget.PageIndicatorView
+            android:id="@+id/grid_page_index"
+            android:layout_width="153dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/advertise_gallery_layout"
+        android:maxLines="2"
+        android:textColor="#666666"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/title"
+        android:layout_below="@id/title"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/advertise_gallery_layout"
+        android:textColor="#ff6633"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/express_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/price"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/price"
+        android:textColor="#888888"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/month_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/title"
+        android:layout_below="@id/price"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/advertise_gallery_layout"
+        android:text="@string/month_sale"
+        android:textColor="#888888"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/sales_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/month_sale"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/month_sale"
+        android:textColor="#888888"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/score_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/title"
+        android:layout_below="@id/month_sale"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/advertise_gallery_layout"
+        android:text="@string/score"
+        android:textColor="#888888"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/title"
+        android:layout_below="@id/score_value"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/advertise_gallery_layout"
+        android:textColor="#888888"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/platform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/area"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="48dp"
+        android:textColor="#aaaaaa"
+        android:textSize="13dp" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/advertise_gallery_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:contentDescription="@null"
+        android:src="@drawable/drop_down_img" />
+
+    <ViewStub
+        android:id="@+id/contrast_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_toRightOf="@id/advertise_gallery_layout"
+        android:background="@color/ninety_five_percent_white"
+        android:layout="@layout/contrast_menu_layout"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/advertise_gallery_layout"
+        android:background="#f9f9f9" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#e5e5e5" />
+
+</RelativeLayout>
