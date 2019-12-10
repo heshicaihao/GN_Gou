@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_list_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="2dp" >
+
+    <ImageView
+        android:id="@+id/search_selected"
+        android:layout_width="3dp"
+        android:layout_height="49dp"
+        android:background="@drawable/gn_selected"
+        android:contentDescription="@string/empty" />
+
+    <Button
+        android:id="@+id/tv_mark"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/mark_dark"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_horizontal|top"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/list_right_triangle"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="50dp"
+        android:paddingRight="15dip"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/about_text" />
+
+    <ImageView
+        android:id="@+id/list_hemline"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:background="#d1d1d1"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/empty"
+        />
+
+</RelativeLayout>

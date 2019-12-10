@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="titie_padding_left">10dip</dimen>
+    <dimen name="title_padding_right">10dip</dimen>
+    <dimen name="menu_margin_right">4dip</dimen>
+    <dimen name="service_margin_top">200dip</dimen>
+    <dimen name="activitys_top_margin">50dip</dimen>
+    <dimen name="activitys_logo_width">240dip</dimen>
+    <dimen name="activitys_logo_height">190dip</dimen>
+    <dimen name="shadow_width">10dp</dimen>
+    <dimen name="notification_icon_width">48dp</dimen>
+    <dimen name="notification_icon_height">48dp</dimen>
+    <dimen name="logo_width">168.5dip</dimen>
+    <dimen name="logo_height">360.5dip</dimen>
+    <dimen name="user_guide_botom_margin">50dip</dimen>
+    <dimen name="new_weibo_prompt">120dp</dimen>
+    <dimen name="rl_buttom_margin_buttom">20dip</dimen>
+    <dimen name="iv_help_bg_margin_top">180dip</dimen>
+    <dimen name="iv_introduce_rate_margin_top">260dip</dimen>
+    <dimen name="iv_introduce_text_width">11dip</dimen>
+    <dimen name="iv_introduce_text_height">4dip</dimen>
+
+</resources>

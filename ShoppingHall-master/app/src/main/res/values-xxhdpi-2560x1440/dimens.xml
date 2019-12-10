@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- heshicaihao -->
+    <dimen name="welcome_title_margintop">50dp</dimen>
+    <dimen name="welcome_mid_container_marginbottom">40dp</dimen>
+
+</resources>

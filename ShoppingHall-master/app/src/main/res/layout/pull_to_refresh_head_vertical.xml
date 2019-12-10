@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <FrameLayout
+        android:id="@+id/fl_inner"
+        android:layout_width="fill_parent"
+        android:layout_height="90dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/refresh_balloon"
+                android:layout_width="57dip"
+                android:layout_height="51dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/shangcheng" />
+
+            <ImageView
+                android:id="@+id/pull_to_refresh_image"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="52dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/lunzi"/>
+
+            <ImageView
+                android:id="@+id/iv_touying"
+                android:layout_width="26dip"
+                android:layout_height="4dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="78dip"
+                android:src="@drawable/touying"
+                android:scaleType="fitXY" />
+
+            <ProgressBar
+                android:id="@+id/pull_to_refresh_progress"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dip"
+                android:orientation="vertical" 
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/pull_to_refresh_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="25dip"
+                    android:singleLine="true"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/pull_to_refresh_sub_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="3dip"
+                    android:singleLine="true"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</merge>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RadioGroup
+        android:id="@+id/faqs_tab_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="38dip"
+        android:layout_alignParentTop="true"
+        android:background="#fcfcfc"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <RadioButton
+            android:id="@+id/faqs_tab_questions"
+            style="@style/tab_btn_style"
+            android:checked="true"
+            android:text="@string/ask_question" />
+
+        <RadioButton
+            android:id="@+id/faqs_tab_answers"
+            style="@style/tab_btn_style"
+            android:text="@string/answer" />
+    </RadioGroup>
+
+    <com.gionee.client.view.widget.TabViewPager
+        android:id="@+id/faqs_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/faqs_tab_radio"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<com.gionee.client.view.widget.MainContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ededed"
+    android:orientation="vertical" >
+
+    <com.gionee.client.view.shoppingmall.GNTitleBar
+        xmlns:ptr="http://schemas.android.com/apk/res/com.gionee.client"
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        ptr:rightBtnVisible="false" />
+
+    <FrameLayout
+        android:id="@+id/activity_containner"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_bar" >
+    </FrameLayout>
+
+    <View
+        android:id="@+id/top_bar_shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_below="@id/title_bar"
+        android:background="@drawable/top_bar_shadow" />
+
+    <RelativeLayout
+        android:id="@+id/guide_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_transparent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/guide_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="48dip"
+         android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="170dip" 
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_balloon"
+                android:layout_width="82dip"
+                android:layout_height="79dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/shangcheng" />
+
+            <ImageView
+                android:id="@+id/iv_lunzi"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="58dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/lunzi" />
+
+            <ImageView
+                android:id="@+id/iv_touying"
+                android:layout_width="38dip"
+                android:layout_height="6dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/touying" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="114dip"
+                android:text="@string/tv_loading"
+                android:textColor="@color/tv_loading"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        style="@style/newProgressStyle"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</com.gionee.client.view.widget.MainContainerView>

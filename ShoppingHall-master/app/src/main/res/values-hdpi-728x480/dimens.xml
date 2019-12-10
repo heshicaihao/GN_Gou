@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="no_data_text_size">14dp</dimen>
+    <dimen name="no_data_layout_padding_bottom">4dp</dimen>
+    <!-- heshicaihao -->
+
+    <dimen name="welcome_title_margintop">50dp</dimen>
+    <dimen name="welcome_mid_container_marginbottom">20dp</dimen>
+    <dimen name="welcome_title_width">203dp</dimen>
+    <dimen name="welcome_title_height">52dp</dimen>
+    <dimen name="welcome_mid_width">170dp</dimen>
+    <dimen name="welcome_mid_height">234dp</dimen>
+    <dimen name="welcome_bot_width">242dp</dimen>
+    <dimen name="welcome_bot_height">135dp</dimen>
+    <dimen name="baby_width">38dp</dimen>
+    <dimen name="baby_height">46dp</dimen>
+    <dimen name="plane_width">52dp</dimen>
+    <dimen name="plane_height">44dp</dimen>
+    <dimen name="welcome_mid_one_width">288dp</dimen>
+    <dimen name="welcome_mid_one_height">334dp</dimen>
+
+</resources>

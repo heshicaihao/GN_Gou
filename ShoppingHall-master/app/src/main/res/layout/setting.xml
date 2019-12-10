@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical" >
+
+    <com.gionee.client.view.shoppingmall.GNTitleBar
+        xmlns:ptr="http://schemas.android.com/apk/res/com.gionee.client"
+        android:id="@+id/top_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        ptr:rightBtnVisible="false"
+        ptr:title="@string/settings" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_title"
+        android:background="#f5f5f5"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/menu_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/clear_cache_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="51dip"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/menu_item_bg"
+                android:clickable="true"
+                android:onClick="onClick" >
+
+                <TextView
+                    style="@style/menu_item_style"
+                    android:layout_width="wrap_content"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/clear_cache_btn"
+                    android:drawableRight="@null"
+                    android:focusable="false"
+                    android:paddingRight="3dip"
+                    android:text="@string/clean_cache" />
+
+                <ProgressBar
+                    android:id="@+id/clear_chache_pro"
+                    style="@style/newProgressStyle"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/clear_cache_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dip"
+                    android:background="@color/transparent"
+                    android:text="@string/clean_success"
+                    android:textColor="@color/add_text_color"
+                    android:textSize="13dip"
+                    android:visibility="gone" >
+                </TextView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shopping_help_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="51dip"
+                android:background="@drawable/menu_item_bg"
+                android:clickable="true"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:id="@+id/shopping_help_tv"
+                    style="@style/menu_item_style"
+                    android:layout_width="wrap_content"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/push_bg"
+                    android:drawableRight="@null"
+                    android:focusable="false"
+                    android:paddingRight="3dip"
+                    android:text="@string/push" />
+
+                <com.gionee.client.view.widget.CustomSwitch
+                    android:id="@+id/shopping_help_switch"
+                    android:layout_width="60dip"
+                    android:layout_height="27dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/help_switch_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dip"
+                android:layout_marginLeft="18dip"
+                android:layout_marginRight="18dip"
+                android:layout_marginTop="7dip"
+                android:clickable="false"
+                android:focusable="false"
+                android:lineSpacingExtra="4dip"
+                android:textColor="@color/comments_text_nor"
+                android:textSize="13dip" />
+
+            <RelativeLayout
+                android:id="@+id/menu_check_version"
+                android:layout_width="fill_parent"
+                android:layout_height="51dip"
+                android:background="@drawable/menu_item_bg"
+                android:clickable="true"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:id="@+id/menu_check_version_tv"
+                    style="@style/menu_item_style"
+                    android:layout_width="wrap_content"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/more_update_version"
+                    android:drawableRight="@null"
+                    android:focusable="false"
+                    android:paddingRight="3dip"
+                    android:text="@string/menu_check_version" />
+
+                <ImageView
+                    android:id="@+id/more_version_triangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:src="@drawable/more_triangle" />
+
+                <ImageView
+                    android:id="@+id/new_version_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="6dip"
+                    android:layout_toLeftOf="@id/more_version_triangle"
+                    android:padding="2dip"
+                    android:src="@drawable/red_dot" 
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/version_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dip"
+                    android:textColor="@color/add_text_color" />
+
+                <ProgressBar
+                    android:id="@+id/check_version_pro"
+                    style="@style/newProgressStyle"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="62dip"
+                android:layout_height="@dimen/menu_color_divider_height"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/wifi_tip_lay"
+                android:layout_width="fill_parent"
+                android:layout_height="51dip"
+                android:background="@drawable/menu_item_bg"
+                android:clickable="true"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:id="@+id/wifi_tip_tv"
+                    style="@style/menu_item_style"
+                    android:layout_width="wrap_content"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/wifi_icon"
+                    android:drawableRight="@null"
+                    android:focusable="false"
+                    android:paddingRight="3dip"
+                    android:text="@string/wifi_notify" />
+
+                <com.gionee.client.view.widget.CustomSwitch
+                    android:id="@+id/wifi_help_switch"
+                    android:layout_width="60dip"
+                    android:layout_height="27dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="18dip" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/wifi_help_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dip"
+                android:layout_marginLeft="18dip"
+                android:layout_marginRight="18dip"
+                android:layout_marginTop="7dip"
+                android:clickable="false"
+                android:focusable="false"
+                android:lineSpacingExtra="4dip"
+                android:textColor="@color/comments_text_nor"
+                android:textSize="13dip"
+                android:text="@string/wifi_help_notify" />
+
+            <TextView
+                android:id="@+id/menu_about_shoppingmall"
+                style="@style/menu_item_style"
+                android:drawableLeft="@drawable/more_about_btn"
+                android:text="@string/about_shoppingmall" />
+
+            <View
+                android:layout_width="62dip"
+                android:layout_height="@dimen/menu_color_divider_height"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/menu_like"
+                style="@style/menu_item_style"
+                android:drawableLeft="@drawable/more_encourage_btn"
+                android:text="@string/like" />
+
+            <View
+                android:layout_width="62dip"
+                android:layout_height="@dimen/menu_color_divider_height"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/menu_wx_friends"
+                style="@style/menu_item_style"
+                android:drawableLeft="@drawable/more_weixin"
+                android:text="@string/share_weixin_friends" />
+
+            <View
+                android:layout_width="62dip"
+                android:layout_height="@dimen/menu_color_divider_height"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="51dip"
+                android:background="@drawable/menu_item_bg"
+                android:clickable="true"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:id="@+id/menu_weibo_auth"
+                    style="@style/menu_item_style"
+                    android:drawableLeft="@drawable/more_weibo"
+                    android:text="@string/follow_weibo" />
+
+                <ImageView
+                    android:id="@+id/more_sina_triangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dip"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/more_triangle" />
+
+                <ImageView
+                    android:id="@+id/new_sina_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="6dip"
+                    android:layout_toLeftOf="@id/more_sina_triangle"
+                    android:contentDescription="@string/empty"
+                    android:padding="2dip"
+                    android:src="@drawable/red_dot"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/menu_weibo_notice"
+                    android:layout_width="@dimen/new_weibo_prompt"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="2dp"
+                    android:layout_toLeftOf="@id/new_sina_sign"
+                    android:ellipsize="end"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/add_text_color" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/version_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dip"
+                android:gravity="center"
+                android:text="@string/version_code"
+                android:textColor="#a0a0a0" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_below="@id/top_title"
+        android:background="@drawable/top_bar_shadow" />
+
+</RelativeLayout>

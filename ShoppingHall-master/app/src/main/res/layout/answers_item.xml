@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="7.5dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:id="@+id/answers_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/discuss_praise"
+            android:textSize="16sp"
+            android:visibility="gone" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/answers_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/answers_lable"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/comments_text_color"
+            android:textSize="16sp" >
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/answers_content"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/answers_title"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/messages_title_bg"
+            android:visibility="gone" >
+
+            <com.gionee.client.view.widget.CircleImageView
+                android:id="@+id/answers_avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/empty"
+                android:src="@drawable/head_default" />
+
+            <TextView
+                android:id="@+id/ansers_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/answers_avatar"
+                android:ellipsize="end"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:textColor="@color/discuss_praise"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/answer_quesiton_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/ansers_nickname"
+                android:layout_toRightOf="@id/ansers_nickname"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/send_qb_gray"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/answers_questions_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/answers_content"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/answers_questions_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/answers_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/questions_answers_img"
+            android:drawablePadding="5dp"
+            android:textColor="@color/send_qb_gray"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

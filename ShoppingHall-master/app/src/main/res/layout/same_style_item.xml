@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="124dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="124dp" >
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="102dp"
+        android:layout_height="102dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@null"
+        android:src="@drawable/comment_img_default" />
+
+    <ImageView
+        android:id="@+id/current_style_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@null"
+        android:src="@drawable/current_sytle"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/thumb"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/thumb"
+        android:ellipsize="end"
+        android:gravity="top"
+        android:maxLines="2"
+        android:textColor="#666666"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/score_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/thumb"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/thumb"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/score"
+        android:textColor="#888888"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/thumb"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/score_value"
+        android:text="@string/ok"
+        android:textColor="#888888"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/month_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/score_value"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/thumb"
+        android:text="@string/month_sale"
+        android:textColor="#888888"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/sales_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/month_sale"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/month_sale"
+        android:textColor="#888888"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/sales_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/month_sale"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/sales_volume"
+        android:background="@drawable/same_style_tv_bg"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/month_sale"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/thumb"
+        android:textColor="#ff6633"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/express_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/price"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="7dp"
+        android:layout_toRightOf="@id/price"
+        android:gravity="center_vertical"
+        android:textColor="#888888"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/price_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/price"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/express_method"
+        android:background="@drawable/same_style_tv_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/white"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="8dp"
+        android:contentDescription="@null"
+        android:padding="2dp"
+        android:src="@drawable/drop_down_img"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/platform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/thumb"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/menu"
+        android:layout_toRightOf="@id/area"
+        android:gravity="right"
+        android:textColor="#aaaaaa"
+        android:textSize="12dp" />
+
+    <ViewStub
+        android:id="@+id/same_style_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:layout_toRightOf="@id/thumb"
+        android:background="@color/white"
+        android:layout="@layout/same_style_detail_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

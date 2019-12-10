@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingTop="20dip" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/share_weixin"
+            style="@style/share_btn_style"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="6.5dip"
+            android:paddingRight="6.5dip"
+            android:text="@string/weixin_friends" />
+
+        <TextView
+            android:id="@+id/share_friends"
+            style="@style/share_btn_style"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/weixin_friends_btn"
+            android:text="@string/weixin_friends_circle" />
+
+        <TextView
+            android:id="@+id/share_weibo"
+            style="@style/share_btn_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dip"
+            android:drawableTop="@drawable/weibo_btn"
+            android:paddingLeft="6.5dip"
+            android:paddingRight="6.5dip"
+            android:text="@string/sina_weibo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/share_qq_friend"
+            style="@style/share_btn_style"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawableTop="@drawable/qq"
+            android:paddingLeft="6.5dip"
+            android:paddingRight="6.5dip"
+            android:text="@string/qq_friend" />
+
+        <TextView
+            android:id="@+id/share_qq_zone"
+            style="@style/share_btn_style"
+            android:layout_centerInParent="true"
+            android:drawableTop="@drawable/qqzone"
+            android:text="@string/qq_zone" />
+    </RelativeLayout>
+
+</LinearLayout>

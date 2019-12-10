@@ -1,11 +1,280 @@
-<resources>
-
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ *
+ * Copyright 2006,2007,2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="compare_price_style">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">43dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">0dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:textColor">@drawable/selector_tab_text</item>
+        <item name="android:layout_weight">1.0</item>
     </style>
+    
+
+    <style name="menu_item_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">51dip</item>
+        <item name="android:background">@drawable/menu_item_bg</item>
+        <item name="android:textColor">@color/menu_text</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingLeft">18dip</item>
+        <item name="android:paddingRight">20dip</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:drawableRight">@drawable/more_triangle</item>
+        <item name="android:drawablePadding">20dip</item>
+    </style>
+
+    <style name="menu_group_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">24dip</item>
+        <item name="android:background">@drawable/menu_group_bg_nor</item>
+        <item name="android:textColor">@color/menu_group_text</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:clickable">false</item>
+        <item name="android:paddingLeft">18dip</item>
+        <item name="android:paddingRight">17dip</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:drawablePadding">20dip</item>
+        <item name="android:button">@drawable/menu_left_tab</item>
+    </style>
+
+    <style name="GN_ThemeLight" parent="@android:style/Theme.Light">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:colorBackground">#ffffff</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:panelBackground">@drawable/gray</item>
+        <!-- These three attributes do not seems to be used by the framework. Declared public though -->
+        <item name="android:panelColorBackground">#ffffff</item>
+        <item name="android:panelColorForeground">?android:attr/textColorPrimary</item>
+        <item name="android:panelTextAppearance">?android:attr/textAppearance</item>
+    </style>
+
+    <style name="Web_Theme" parent="@android:style/Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:colorBackground">#ffffff</item>
+        <item name="android:panelBackground">@drawable/gray</item>
+        <item name="android:panelColorBackground">#ffffff</item>
+        <item name="android:panelColorForeground">?android:attr/textColorPrimary</item>
+        <item name="android:panelTextAppearance">?android:attr/textAppearance</item>
+    </style>
+
+    <style name="custom_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:popupBackground">@color/transparent</item>
+        <item name="android:shadowColor">@color/transparent</item>
+    </style>
+
+    <style name="custom_guide_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item> <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item> <!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item> <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item> <!-- 模糊 -->
+    </style>
+
+    <style name="tab_btn_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/selector_tab_btn</item>
+        <item name="android:textColor">@color/tab_text_color_nor</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="search_tab_btn_style">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/search_tab_selector</item>
+        <item name="android:textColor">@drawable/selector_tab_text</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="bottom_tab_style">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">43dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10dip</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">0dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:textColor">@drawable/selector_tab_text</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="title_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="page_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#949494</item>
+    </style>
+
+    <style name="NoAnimationTheme" parent="@style/GN_ThemeLight">
+        <item name="android:windowAnimationStyle">@style/Animation</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Animation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <!-- Navigation Header -->
+    <style name="NavPage">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+        <!-- <item name="android:background">@drawable/nav_page</item> -->
+        <item name="android:background">@color/navpage</item>
+    </style>
+
+    <style name="share_btn_style" parent="android:Widget.TextView">
+        <item name="android:background">@drawable/share_btn_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:drawablePadding">8dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawableTop">@drawable/weixin_btn</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">30dip</item>
+        <item name="android:textColor">@drawable/share_btn_text_color</item>
+        <item name="android:textSize">13dip</item>
+    </style>
+
+    <style name="service_btn_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawablePadding">9dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">#7b7b7b</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@drawable/attention_item_bg</item>
+    </style>
+
+    <style name="service_divider_style">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:background">#ededed</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="grid_divider_style">
+        <item name="android:background">#dadada</item>
+    </style>
+
+    <style name="Translate_style">
+        <item name="android:windowBackground">@color/transparent_background</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/menushow</item>
+        <item name="android:windowExitAnimation">@anim/menuhide</item>
+    </style>
+
+    <style name="webview_bg_style">
+        <item name="android:background">#f2f2f2</item>
+    </style>
+
+    <style name="gray_color_bg_style">
+        <item name="android:background">#f2f2f2</item>
+    </style>
+
+    <style name="search_question_text_style" parent="android:Widget.TextView">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NotificationText">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="NotificationTitle">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="progressbar_horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:minHeight">10.5dip</item>
+        <item name="android:maxHeight">10.5dip</item>
+    </style>
+
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontal_spacing" format="dimension" />
+        <attr name="vertical_spacing" format="dimension" />
+    </declare-styleable>
 
 </resources>

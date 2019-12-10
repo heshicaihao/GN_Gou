@@ -5,20 +5,758 @@
 
     <dist:module dist:instant="true" />
 
+
+    <permission
+        android:name="com.gionee.client.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.gionee.cloud.permission.RECEIVE" />
+    <uses-permission android:name="com.gionee.client.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_ALL_DOWNLOADS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <permission
+        android:name="com.gionee.client.permission.MMOAUTH_CALLBACK"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.gionee.client.permission.MM_MESSAGE"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="com.gionee.client.permission.MMOAUTH_CALLBACK" />
+    <uses-permission android:name="com.gionee.client.permission.MM_MESSAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
     <application
+        android:name="com.gionee.client.GNApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/GN_ThemeLight" >
+        <meta-data
+            android:name="mchid"
+            android:value="MzIxNjU0" />
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="70d1167cf9" />
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="@string/channel" />
+        <meta-data
+            android:name="api_key"
+            android:value="5U4B33TI0XHsz5lotmxzrYfG" />
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true" />
+
+        <!-- 360广告SDK配置开始 -->
+        <!-- 应用修改部分配置，其中：appId, appKey 从开放平台申请； -->
+        <!--
+        <meta-data
+            android:name="QHOPENSDK_APPID"
+            android:value="200636346" />
+        <meta-data
+            android:name="QHOPENSDK_APPKEY"
+            android:value="760357e54cf514c078d05bea77d8497f" />
+        -->
+        <!--
+        开发者配置，终端用户从墙上下载应用后，获取的积分信息Receiver, 积分墙必须
+        <receiver android:name="com.gionee.client.business.receiver.QihuIntegralReciver" >
+            <intent-filter>
+                <action android:name="com.qihoo.gamead.integral.wall.action" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.qihoo.gamead.activity.LightAppActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.qihoo.gamead.activity.AppDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+
+        <service android:name="com.qihoo.gamead.download.DownloadService" />
+        <service
+            android:name="com.qihoo.gamead.event.QEventService"
+            android:exported="false"
+            android:process=":QEvent" />
+
+        <receiver
+            android:name="com.qihoo.psdk.local.QBootReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.qihoo.psdk.app.QStatActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <service
+            android:name="com.qihoo.psdk.remote.QRemoteService"
+            android:exported="true"
+            android:process=":QRemote" >
+            <intent-filter>
+                <action android:name="com.qihoo.psdk.service.action.remote" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.qihoo.psdk.local.QLocalService"
+            android:exported="true"
+            android:process=":QLocal" >
+            <intent-filter>
+                <action android:name="com.qihoo.psdk.service.action.local" />
+            </intent-filter>
+        </service>
+        -->
+        <!-- 360广告SDK配置结束 -->
+
+        <activity
+            android:name="com.gionee.client.upgradeplus.UpgradeTestActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.GNSplashActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoAnimationTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <data
+                    android:host="home"
+                    android:scheme="gngou" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name="com.gionee.client.activity.webViewPage.ThridPartyWebActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:process=":webviewpage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Web_Theme"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.gionee.client.ThirdParty" />
+            </intent-filter>
+             <intent-filter>
+                <data
+                    android:host="web"
+                    android:scheme="gngou" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter> 
+
+        </activity>
+         <activity
+            android:name="com.gionee.client.activity.webViewPage.GNCutPriceWebpageActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        
+        <activity
+            android:name="com.gionee.client.activity.compareprice.ComparePriceActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.webViewPage.GNSelfPageActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.GN_WEBVIEW" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.myfavorites.StoryDetailActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.gionee.client.StoryDetail" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.GnHomeActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HomePageIndicatorDefaults"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.GNSearchActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoAnimationTheme"
+            android:windowSoftInputMode="adjustUnspecified|adjustPan|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.bargainprice.BargainPriceActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.gionee.client.SpecialPrice" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.myfavorites.MyFavoritesActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoAnimationTheme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.history.GnBrowseHistoryActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.feedback.GNConversationActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.gionee.client.Conversation" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.feedback.GNContactActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.feedback.GNQestionsActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.attention.AddAttentionActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults"
+            android:windowSoftInputMode="adjustUnspecified|adjustPan|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.scan.ScannerActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.scan.ScanResultActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:process=":webviewpage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Web_Theme"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.apprecommend.AppRecommendActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name=".activity.question.ClipPhotoActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.apprecommend.AppDetailActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.gionee.client.activity.sina.WeiboAuthActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.webViewPage.GNGuideDetilActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translate_style"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.GNSettingActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.GuideActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.story.GNDiscussDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.GNCutActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.contrast.GNGoodsContrastActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.samestyle.GNSameStyleActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent1101044013" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.question.SearchQuestion"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.business.sina.WeiBoEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- ——————————————图片浏览  Start—————————————— -->
+
+        <activity
+            android:name="com.gionee.client.activity.imageScan.ImageFolderScanActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:theme="@style/GN_ThemeLight" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.imageScan.ImageScanAndSelectActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:theme="@style/GN_ThemeLight" >
+        </activity>
+        <!-- ——————————————图片浏览  end—————————————————————— -->
+        <!-- ————————————————————————————————————————————— -->
+        <!-- ————————————————————— 晒单 start ———————————————————— -->
+        <activity
+            android:name="com.gionee.client.activity.hotorder.SubmitHotOrderActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustPan|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.hotorder.ShowHotOrderActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.hotorder.HotOrderResultActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- ————————————————————— 晒单 end ———————————————————— -->
+        <!-- ————————————————————— 问答 start ———————————————————— -->
+        <activity
+            android:name="com.gionee.client.activity.question.QuestionListActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.question.QuestionDetailActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.question.AskQuestionActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustPan|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.question.AddDescriptionActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustPan|stateVisible" >
+        </activity>
+        <!-- ————————————————————— 问答 end ———————————————————— -->
+
+        <activity
+            android:name="com.gionee.client.activity.question.GNFAQsActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/GN_ThemeLight"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.GNMessageListActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.gionee.client.MesaggeList" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.GNProfileActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.feedback.CommonQuestionActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.gionee.client.activity.welcome.GNWelcomeActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- ————————————————————————————————————————————— -->
+        <!-- ——————————————广播接收者Reciever  Start—————————————————————— -->
+        <receiver
+            android:name="com.gionee.client.business.push.PushReceiver"
+            android:permission="com.gionee.cloud.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.gionee.cloud.intent.REGISTRATION" />
+
+                <category android:name="com.gionee.cloud" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gionee.cloud.intent.RECEIVE" />
+
+                <category android:name="com.gionee.cloud" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.gionee.client.business.receiver.DownLoadReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.gionee.client.business.push.BaiduPushReceiver" >
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
+                <!-- 接收bind,unbind,fetch,delete等反馈消息 -->
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD" />
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.tencent.mm.sdk.plugin.MMPluginOAuth$Receiver"
+            android:permission="com.tencent.mm.oauth.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.sdk.plugin.Intent.ACTION_RESPONSE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.tencent.mm.sdk.channel.MMessage$Receiver"
+            android:permission="com.tencent.mm.plugin.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.tencent.mm.sdk.channel.Intent.ACTION_MESSAGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.gionee.client.business.receiver.PromotionalSaleRecevicer"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
+            <intent-filter android:priority="500" >
+                <action android:name="com.gionee.client.recevice.promotionalSale" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- ——————————————广播接收者Reciever  end—————————————— -->
+        <!-- —————————————————————————————————————————— -->
+        <!-- ——————————————注册服务Service  Start—————————————— -->
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1" >
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.gionee.client.service.PromotionalSaleService"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="com.gionee.client.service.promotionalSale" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true" />
+        <!-- ——————————————注册服务Service  end—————————————— -->
+        <!-- —————————————————————————————————————————— -->
+        <!-- —————————————— 内容提供者 Start—————————————— -->
+        <provider
+            android:name="com.gionee.client.activity.history.GnGouProvider"
+            android:authorities="gngou.provider"
+            android:exported="false" >
+        </provider>
+        <!-- ——————————————内容提供者 end—————————————— -->
+        <activity
+            android:name="com.wayde.ads.EggAdsActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:process=".com.oc.safesetting.service"
+            android:theme="@style/Translate_style" >
+        </activity>
+        <activity
+            android:name="com.wayde.ads.AdvertiseWebActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:process=".com.oc.safesetting.service"
+            android:theme="@style/Web_Theme" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.wayde.adswebview" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.wayde.ads.ObserverAppService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=".com.oc.safesetting.service" >
+            <intent-filter android:priority="1000" >
+                <action android:name="com.wayde.observerService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.wayde.ads.AutoAdvertiseRecevicer"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+            android:process=".com.oc.safesetting.service" >
+            <intent-filter android:priority="500" >
+                <action android:name="com.wayde.ad.observerRecieve" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/cut_shop"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp" >
+
+        <ImageView
+            android:id="@+id/cut_shop_icon"
+            android:layout_width="26.5dp"
+            android:layout_height="26.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/cut_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/cut_shop_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/send_qb_gray"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@drawable/my_favorite_top_divider" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp" >
+
+        <ImageView
+            android:id="@+id/cut_good_icon"
+            android:layout_width="100dp"
+            android:layout_height="93.5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/empty"
+            android:scaleType="fitCenter" />
+
+        <Button
+            android:id="@+id/cut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/yellow_btn_src"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/cut_good_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@id/cut"
+            android:layout_toRightOf="@id/cut_good_icon"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/comments_text_color"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/good_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/cut_good_icon"
+            android:layout_toRightOf="@id/cut_good_icon"
+            android:textColor="@color/send_qb_gray"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/good_current_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/good_price"
+            android:layout_alignRight="@id/cut_good_title"
+            android:layout_toRightOf="@id/cut_good_icon"
+            android:textColor="@color/search_btn_sel"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/cut_good_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/good_price"
+            android:layout_marginLeft="@dimen/cut_info_margin"
+            android:layout_toRightOf="@id/good_price"
+            android:textColor="@color/send_qb_gray"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</LinearLayout>

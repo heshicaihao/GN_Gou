@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/browse_history_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/comment_list_divider"
+    android:orientation="vertical"
+    android:overScrollMode="always" >
+
+    <com.gionee.client.view.widget.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/order_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cut_title"
+        android:background="@drawable/messges_list_divider"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@drawable/transparent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        ptr:ptrOverScroll="false" 
+        />
+
+    <RelativeLayout
+        android:id="@+id/history_no_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/history_action_btn"
+            android:layout_width="288dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/umeng_fb_contact_info_btn"
+            android:text="@string/goto_look"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/above_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/history_action_btn"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp" >
+
+            <ImageView
+                android:id="@+id/amigo_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@null"
+                android:src="@drawable/amigo_icon" />
+
+            <TextView
+                android:id="@+id/history_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/amigo_icon"
+                android:layout_centerHorizontal="true"
+                android:text="@string/no_order_history"
+                android:textColor="#cecece"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="170dip" 
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_balloon"
+                android:layout_width="82dip"
+                android:layout_height="79dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/shangcheng" />
+
+            <ImageView
+                android:id="@+id/iv_lunzi"
+                android:layout_width="35dip"
+                android:layout_height="35dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="58dip"
+                android:contentDescription="@string/pull_to_refresh_pull_label"
+                android:scaleType="fitXY"
+                android:src="@drawable/lunzi" />
+
+            <ImageView
+                android:id="@+id/iv_touying"
+                android:layout_width="38dip"
+                android:layout_height="6dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/touying" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="114dip"
+                android:text="@string/tv_loading"
+                android:textColor="@color/tv_loading"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

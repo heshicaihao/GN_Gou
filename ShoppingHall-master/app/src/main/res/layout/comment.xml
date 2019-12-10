@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bargain_price_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/comment_list_divider"
+    android:orientation="vertical"
+    android:overScrollMode="always" >
+
+    <com.gionee.client.view.widget.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/comment_list_divider"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@drawable/comment_list_divider"
+        android:dividerHeight="8dip"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        ptr:ptrOverScroll="false" />
+
+    <ViewStub
+        android:id="@+id/no_comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/no_date_layout" />
+
+    <ProgressBar
+        android:id="@+id/loading_bar"
+        style="@style/newProgressStyle"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/go_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginRight="12dp"
+        android:contentDescription="@null"
+        android:src="@drawable/go_top_img"
+        android:visibility="gone" />
+
+</RelativeLayout>

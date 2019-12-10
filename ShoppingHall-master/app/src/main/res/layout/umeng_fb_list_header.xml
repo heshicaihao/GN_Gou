@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- add a wrapper, since the outer relative layout will be padded dynamically for pull to show animation. -->
+
+    <TextView
+        android:id="@+id/umeng_fb_reply_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:background="@color/gray_tab_bg"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:text="@string/pull_down_get_more"
+        android:textColor="#222222"
+        android:textSize="12sp" />
+
+</RelativeLayout>

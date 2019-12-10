@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="titie_padding_left">16dip</dimen>
+    <dimen name="title_padding_right">16dip</dimen>
+    <dimen name="menu_margin_right">8dip</dimen>
+    <dimen name="service_margin_top">200dip</dimen>
+    <dimen name="feedback_edit_left_right_bottom_margin">12dp</dimen>
+    <dimen name="feedback_edit_top_margin">22dp</dimen>
+    <dimen name="feedback_edit_height">125dp</dimen>
+    <dimen name="titile_bar_height">54dp</dimen>
+    <dimen name="attention_item_height">80dip</dimen>
+    <dimen name="attention_item_divider">1.5px</dimen>
+    <dimen name="speed_service_item_height">58dip</dimen>
+    <dimen name="speed_service_item_divider">1.0px</dimen>
+    <dimen name="menu_color_divider_height">2px</dimen>
+    <dimen name="checkbox_width">19dip</dimen>
+    <dimen name="checkbox_height">19dip</dimen>
+    <dimen name="checkbox_margin_left">5dip</dimen>
+    <dimen name="dialog_content_height">109dip</dimen>
+    <dimen name="share_btn_width">47dip</dimen>
+    <dimen name="version_icon_padding">10dip</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="slidingmenu_offset">125dp</dimen>
+    <dimen name="app_name_size">16dp</dimen>
+    <dimen name="attention_bottom_padding">10dip</dimen>
+    <dimen name="user_guide_botom_margin">80dip</dimen>
+
+    <integer name="activity_animation_duration">300</integer>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="no_data_text_size">18dp</dimen>
+    <dimen name="no_data_layout_padding_bottom">6dp</dimen>
+
+    <!-- heshicaihao -->
+    <dimen name="welcome_title_width">254dp</dimen>
+    <dimen name="welcome_title_height">65dp</dimen>
+    <dimen name="welcome_mid_width">212dp</dimen>
+    <dimen name="welcome_mid_height">293dp</dimen>
+    <dimen name="welcome_bot_width">302dp</dimen>
+    <dimen name="welcome_bot_height">169dp</dimen>
+    <dimen name="baby_width">48dp</dimen>
+    <dimen name="baby_height">57dp</dimen>
+    <dimen name="plane_width">65dp</dimen>
+    <dimen name="plane_height">55dp</dimen>
+    <dimen name="welcome_mid_one_width">360dp</dimen>
+    <dimen name="welcome_mid_one_height">418dp</dimen>
+
+</resources>

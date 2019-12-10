@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/comment_foot"
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/webview_bar_bg"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/send_discuss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/comments_progress_bar"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/comments_progress_bar"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/return_bg"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="@string/send"
+            android:textColor="@drawable/search_text_color"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <com.gionee.client.view.shoppingmall.CommentsProgressBar
+            android:id="@+id/comments_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:onClick="onClick" />
+    </RelativeLayout>
+
+    <com.gionee.client.view.widget.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/discuss_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/comment_foot"
+        android:background="@color/web_color"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@drawable/comment_list_divider"
+        android:dividerHeight="0.5dip"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        ptr:ptrOverScroll="false" />
+
+    <ViewStub
+        android:id="@+id/no_discuss_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/comment_foot"
+        android:layout="@layout/no_date_layout" />
+
+</RelativeLayout>

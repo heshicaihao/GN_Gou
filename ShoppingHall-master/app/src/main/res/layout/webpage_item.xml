@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:background="@color/white"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/shop_platform"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#999999"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/item_click_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@null"
+        android:onClick="onClick"
+        android:src="@drawable/return_bg" />
+
+    <ImageView
+        android:id="@+id/drop_down_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="31dp"
+        android:contentDescription="@null"
+        android:padding="2dp"
+        android:src="@drawable/drop_down_img" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_layout" >
+
+        <RelativeLayout
+            android:id="@+id/drop_down_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/favorite_drop_down_bg"
+            android:visibility="gone" >
+
+            <include layout="@layout/drop_down" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

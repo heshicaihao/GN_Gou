@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="home_recommond">显示推荐栏</string>
+    <string name="home_pay_on_delivery">显示货到付款栏</string>
+    <string name="home_taobao">显示淘宝好店栏</string>
+
+</resources>
