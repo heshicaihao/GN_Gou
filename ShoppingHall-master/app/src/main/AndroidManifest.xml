@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.gionee.client">
 
     <dist:module dist:instant="true" />
@@ -25,10 +26,12 @@
     <uses-permission android:name="android.permission.ACCESS_ALL_DOWNLOADS" />
     <uses-permission android:name="android.permission.RESTART_PACKAGES" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
@@ -50,7 +53,8 @@
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:name="com.gionee.client.GNApplication"
@@ -74,92 +78,12 @@
             android:name="BaiduMobAd_EXCEPTION_LOG"
             android:value="true" />
 
-        <!-- 360广告SDK配置开始 -->
-        <!-- 应用修改部分配置，其中：appId, appKey 从开放平台申请； -->
-        <!--
-        <meta-data
-            android:name="QHOPENSDK_APPID"
-            android:value="200636346" />
-        <meta-data
-            android:name="QHOPENSDK_APPKEY"
-            android:value="760357e54cf514c078d05bea77d8497f" />
-        -->
-        <!--
-        开发者配置，终端用户从墙上下载应用后，获取的积分信息Receiver, 积分墙必须
-        <receiver android:name="com.gionee.client.business.receiver.QihuIntegralReciver" >
-            <intent-filter>
-                <action android:name="com.qihoo.gamead.integral.wall.action" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name="com.qihoo.gamead.activity.LightAppActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
-        <activity
-            android:name="com.qihoo.gamead.activity.AppDetailActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Light.NoTitleBar" />
-
-        <service android:name="com.qihoo.gamead.download.DownloadService" />
-        <service
-            android:name="com.qihoo.gamead.event.QEventService"
-            android:exported="false"
-            android:process=":QEvent" />
-
-        <receiver
-            android:name="com.qihoo.psdk.local.QBootReceiver"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name="com.qihoo.psdk.app.QStatActivity"
-            android:launchMode="singleInstance"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-        </activity>
-
-        <service
-            android:name="com.qihoo.psdk.remote.QRemoteService"
-            android:exported="true"
-            android:process=":QRemote" >
-            <intent-filter>
-                <action android:name="com.qihoo.psdk.service.action.remote" />
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.qihoo.psdk.local.QLocalService"
-            android:exported="true"
-            android:process=":QLocal" >
-            <intent-filter>
-                <action android:name="com.qihoo.psdk.service.action.local" />
-            </intent-filter>
-        </service>
-        -->
-        <!-- 360广告SDK配置结束 -->
-
-        <activity
-            android:name="com.gionee.client.upgradeplus.UpgradeTestActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
         <activity
             android:name="com.gionee.client.GNSplashActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:exported="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/NoAnimationTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -184,7 +108,7 @@
             android:exported="true"
             android:label="@string/app_name"
             android:process=":webviewpage"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Web_Theme"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
@@ -210,7 +134,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:exported="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustResize" >
         </activity>
@@ -220,7 +144,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:exported="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustResize" >
         </activity>
@@ -229,7 +153,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:exported="true"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter>
@@ -244,7 +168,7 @@
             android:name="com.gionee.client.activity.myfavorites.StoryDetailActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
             <intent-filter>
@@ -258,24 +182,15 @@
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.HomePageIndicatorDefaults"
-            android:windowSoftInputMode="adjustPan" >
-        </activity>
-        <activity
-            android:name=".activity.HomeActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
             android:name="com.gionee.client.activity.GNSearchActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/NoAnimationTheme"
             android:windowSoftInputMode="adjustUnspecified|adjustPan|stateVisible" >
         </activity>
@@ -283,7 +198,7 @@
             android:name="com.gionee.client.activity.bargainprice.BargainPriceActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
             <intent-filter>
@@ -296,7 +211,7 @@
             android:name="com.gionee.client.activity.myfavorites.MyFavoritesActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/NoAnimationTheme"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -304,7 +219,7 @@
             android:name="com.gionee.client.activity.history.GnBrowseHistoryActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -313,7 +228,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
             <intent-filter>
@@ -326,7 +241,7 @@
             android:name="com.gionee.client.activity.feedback.GNContactActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -334,7 +249,7 @@
             android:name="com.gionee.client.activity.feedback.GNQestionsActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -342,7 +257,7 @@
             android:name="com.gionee.client.activity.attention.AddAttentionActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.PageIndicatorDefaults"
             android:windowSoftInputMode="adjustUnspecified|adjustPan|stateVisible" >
         </activity>
@@ -351,7 +266,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -361,7 +276,7 @@
             android:exported="true"
             android:label="@string/app_name"
             android:process=":webviewpage"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Web_Theme"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -369,7 +284,7 @@
             android:name="com.gionee.client.activity.apprecommend.AppRecommendActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -377,7 +292,7 @@
             android:name=".activity.question.ClipPhotoActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -385,7 +300,7 @@
             android:name="com.gionee.client.activity.apprecommend.AppDetailActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -400,7 +315,7 @@
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -408,7 +323,7 @@
             android:name="com.gionee.client.activity.webViewPage.GNGuideDetilActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Translate_style"
             android:windowSoftInputMode="adjustPan" >
         </activity>
@@ -416,23 +331,23 @@
             android:name="com.gionee.client.activity.GNSettingActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
         </activity>
-        <activity
-            android:name="com.gionee.client.activity.GuideActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/GN_ThemeLight"
-            android:windowSoftInputMode="adjustPan" >
-        </activity>
+<!--        <activity-->
+<!--            android:name="com.gionee.client.activity.GuideActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:screenOrientation="fullSensor"-->
+<!--            android:theme="@style/GN_ThemeLight"-->
+<!--            android:windowSoftInputMode="adjustPan" >-->
+<!--        </activity>-->
         <activity
             android:name="com.gionee.client.activity.story.GNDiscussDetailsActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
         </activity>
@@ -440,7 +355,7 @@
             android:name="com.gionee.client.activity.GNCutActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
         </activity>
@@ -448,7 +363,7 @@
             android:name="com.gionee.client.activity.contrast.GNGoodsContrastActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
         </activity>
@@ -456,14 +371,14 @@
             android:name="com.gionee.client.activity.samestyle.GNSameStyleActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
             android:name="cn.sharesdk.framework.ShareSDKUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize" >
             <intent-filter>
@@ -479,7 +394,7 @@
             android:name=".activity.question.SearchQuestion"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustResize|stateVisible" >
         </activity>
@@ -513,20 +428,20 @@
             android:name="com.gionee.client.activity.hotorder.SubmitHotOrderActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustUnspecified|adjustPan|stateHidden" >
         </activity>
         <activity
             android:name="com.gionee.client.activity.hotorder.ShowHotOrderActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="fullSensor" >
         </activity>
         <activity
             android:name="com.gionee.client.activity.hotorder.HotOrderResultActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="fullSensor" >
         </activity>
         <!-- ————————————————————— 晒单 end ———————————————————— -->
         <!-- ————————————————————— 问答 start ———————————————————— -->
@@ -534,7 +449,7 @@
             android:name="com.gionee.client.activity.question.QuestionListActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
         </activity>
@@ -542,7 +457,7 @@
             android:name="com.gionee.client.activity.question.QuestionDetailActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustPan" >
         </activity>
@@ -550,14 +465,14 @@
             android:name="com.gionee.client.activity.question.AskQuestionActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustUnspecified|adjustPan|stateVisible" >
         </activity>
         <activity
             android:name="com.gionee.client.activity.question.AddDescriptionActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustUnspecified|adjustPan|stateVisible" >
         </activity>
         <!-- ————————————————————— 问答 end ———————————————————— -->
@@ -566,7 +481,7 @@
             android:name="com.gionee.client.activity.question.GNFAQsActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/GN_ThemeLight"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
@@ -574,7 +489,7 @@
             android:name="com.gionee.client.activity.GNMessageListActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="fullSensor" >
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
 
@@ -585,21 +500,21 @@
             android:name="com.gionee.client.activity.GNProfileActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
         <activity
             android:name="com.gionee.client.activity.feedback.CommonQuestionActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:windowSoftInputMode="adjustUnspecified|stateHidden" >
         </activity>
         <activity
             android:name="com.gionee.client.activity.welcome.GNWelcomeActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="fullSensor" >
         </activity>
         <!-- ————————————————————————————————————————————— -->
         <!-- ——————————————广播接收者Reciever  Start—————————————————————— -->
@@ -663,20 +578,6 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.tencent.mm.sdk.plugin.MMPluginOAuth$Receiver"
-            android:permission="com.tencent.mm.oauth.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.tencent.mm.sdk.plugin.Intent.ACTION_RESPONSE" />
-            </intent-filter>
-        </receiver>
-        <receiver
-            android:name="com.tencent.mm.sdk.channel.MMessage$Receiver"
-            android:permission="com.tencent.mm.plugin.permission.SEND" >
-            <intent-filter>
-                <action android:name="com.tencent.mm.sdk.channel.Intent.ACTION_MESSAGE" />
-            </intent-filter>
-        </receiver>
-        <receiver
             android:name="com.gionee.client.business.receiver.PromotionalSaleRecevicer"
             android:permission="android.permission.RECEIVE_BOOT_COMPLETED" >
             <intent-filter android:priority="500" >
@@ -685,17 +586,6 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        <!-- ——————————————广播接收者Reciever  end—————————————— -->
-        <!-- —————————————————————————————————————————— -->
-        <!-- ——————————————注册服务Service  Start—————————————— -->
-        <service
-            android:name="com.baidu.android.pushservice.PushService"
-            android:exported="true"
-            android:process=":bdservice_v1" >
-            <intent-filter>
-                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
-            </intent-filter>
-        </service>
         <service
             android:name="com.gionee.client.service.PromotionalSaleService"
             android:enabled="true"
@@ -715,48 +605,6 @@
             android:authorities="gngou.provider"
             android:exported="false" >
         </provider>
-        <!-- ——————————————内容提供者 end—————————————— -->
-        <activity
-            android:name="com.wayde.ads.EggAdsActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:process=".com.oc.safesetting.service"
-            android:theme="@style/Translate_style" >
-        </activity>
-        <activity
-            android:name="com.wayde.ads.AdvertiseWebActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|mcc|mnc|locale|fontScale"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:process=".com.oc.safesetting.service"
-            android:theme="@style/Web_Theme" >
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-
-                <action android:name="com.wayde.adswebview" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name="com.wayde.ads.ObserverAppService"
-            android:enabled="true"
-            android:exported="true"
-            android:process=".com.oc.safesetting.service" >
-            <intent-filter android:priority="1000" >
-                <action android:name="com.wayde.observerService" />
-            </intent-filter>
-        </service>
-
-        <receiver
-            android:name="com.wayde.ads.AutoAdvertiseRecevicer"
-            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
-            android:process=".com.oc.safesetting.service" >
-            <intent-filter android:priority="500" >
-                <action android:name="com.wayde.ad.observerRecieve" />
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>
