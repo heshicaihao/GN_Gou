@@ -22,4 +22,22 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation 'android.support:v13:1.0'
+    implementation 'com.baidu:mobstat:1.0'
+    implementation 'com.gionee:appupgrade:1.0'
+    implementation 'com.wayde:ads:1.0'
+    implementation 'android.support:framework_intermediates:1.0'
+    implementation 'org.apache:httpmime:4.2.2'
+    implementation 'com.baidu:pushservice:4.4.1.88'
+    implementation 'cn.sharesdk:core:2.5.7'
+    implementation 'cn.sharesdk:qq:2.5.7'
+    implementation 'cn.sharesdk:qzone:2.5.7'
+    implementation 'cn.sharesdk:sinaweibo:2.5.7'
+    implementation 'cn.sharesdk:wechat:2.5.7'
+    implementation 'cn.sharesdk:wechat_core:2.5.7'
+    implementation 'cn.sharesdk:wechat_moments:2.5.7'
+    implementation 'com.sina:weibosdkcore:1.0'
+    implementation 'com.umeng:umeng_fb:4.3.2'
+    implementation 'com.google:zxing:1.0'
+
 }

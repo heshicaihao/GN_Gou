@@ -4,6 +4,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
         
     }
     dependencies {
@@ -18,7 +19,10 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url 'https://gitee.com/androidnexus/maven/raw/master' }
+//        maven { url "https://raw.githubusercontent.com/heshicaihao/maven/master"}
+//        maven { url 'file:/E:/Note//maven.git/trunk' }
+//        maven { url 'file:/D:/Heima//ideaMaven/MavenRepository' }
     }
 }
 
