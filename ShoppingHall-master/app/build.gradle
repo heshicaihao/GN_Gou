@@ -39,5 +39,7 @@ dependencies {
     implementation 'com.sina:weibosdkcore:1.0'
     implementation 'com.umeng:umeng_fb:4.3.2'
     implementation 'com.google:zxing:1.0'
+    implementation 'com.heshicaihao:fitter:0.0.0'
+    implementation 'com.heshicaihao:gn_so:0.0.0'
 
 }
