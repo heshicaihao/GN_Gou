@@ -76,7 +76,6 @@ import com.sina.weibo.sdk.api.share.WeiboShareSDK;
  * @date create at 2013-8-15 下午2:23:19
  * @description TODO
  */
-@SuppressLint("NewApi")
 public abstract class BaseFragmentActivity extends FragmentActivity implements IBusinessHandle,
         PlatformActionListener, android.os.Handler.Callback {
     private static final String TAG = "BaseFragmentActivity";
@@ -172,6 +171,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity implements I
 
     }
 
+    @SuppressLint("Range")
     @Override
     public void setContentView(int layoutResID) {
         // TODO Auto-generated method stub

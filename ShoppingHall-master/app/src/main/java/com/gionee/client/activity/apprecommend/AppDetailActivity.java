@@ -246,7 +246,6 @@ public class AppDetailActivity extends BaseFragmentActivity implements OnClickLi
     }
 
     /**
-     * @param jsonAppInfo
      * @description TODO 加载截图，界面默认三张空图，多余三张时自动添加。
      */
     private void loadImages() {
